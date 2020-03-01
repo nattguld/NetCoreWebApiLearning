@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Natgguld - Dev</title>
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+    <h1>NET.CORE 3.1 - Web API - Development</h1>
+    <h3>Pornhub Test</h3>
+
+    <form action="javascript:void(0);" method="POST" onsubmit="test()">
+        <label for="ph-username">Pornhub username:</label><br>
+        <input type="text" id="ph-username" placeholder="username" required /><br />
+
+        <label for="ph-password">Pornhub password:</label><br>
+        <input type="text" id="ph-password" placeholder="password" required /><br />
+
+        <label for="ph-video-url">Pornhub video url:</label><br>
+        <input type="text" id="ph-video-url" placeholder="https://www.pornhub.com/view_video.php?viewkey=ph###" required /><br />
+
+        <label for="ph-comment-text">Comment text:</label><br>
+        <input type="text" id="ph-comment-text" placeholder="Your comment" required /><br />
+
+        <input type="checkbox" id="use-proxy-checkbox" onclick="updateProxyView()" checked />
+        <label for="use-proxy-checkbox">Use proxy</label><br>
+
+        <div id="proxy-view">
+            <label for="proxy-details-div">Proxy details:</label><br>
+            <div id="proxy-details-div">
+                <input type="text" id="proxy-host" placeholder="Host" /><br>
+                <input type="number" id="proxy-port" placeholder="Port" /><br>
+                <input type="text" id="proxy-username" placeholder="Username (optional)" /><br>
+                <input type="password" id="proxy-password" placeholder="Password (optional)" /><br>
+            </div>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script src="js/site.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+        getItems();
+    </script>
+</body>
+</html>
